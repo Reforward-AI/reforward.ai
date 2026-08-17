@@ -21,7 +21,7 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="lg:hidden h-screen absolute top-full bg-white dark:bg-dark-primary w-full border-b border-gray-200 dark:border-gray-800">
+    <div className="lg:hidden h-screen absolute top-full bg-dark-primary w-full border-b border-white/10">
       <div className="flex flex-col justify-between">
         <div className="flex-1 overflow-y-auto">
           <div className="pt-2 pb-3 space-y-1 px-4 sm:px-6">
@@ -32,9 +32,9 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      'block px-3 py-2 rounded-md text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
+                      'block px-3 py-2 rounded-md text-sm font-medium text-white/85 hover:bg-white/10',
                       {
-                        'text-gray-800 dark:text-white': pathname === item.href,
+                        'bg-white text-primary-500': pathname === item.href,
                       }
                     )}
                   >
@@ -50,9 +50,9 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
                       onClick={() => toggleDropdown(item.label)}
                       className={cn(
                         'flex justify-between items-center w-full px-3 py-2 rounded-md text-sm font-medium' +
-                          ' text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
+                          ' text-white/85 hover:bg-white/10',
                         {
-                          'text-gray-700 dark:text-gray-200': item.items.some(
+                          'bg-white text-primary-500': item.items.some(
                             (subItem) => pathname.includes(subItem.href)
                           ),
                         }
@@ -77,10 +77,10 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
                             href={subItem.href}
                             className={cn(
                               'flex items-center px-3 py-2 gap-1.5 rounded-md text-sm font-medium text-gray-500' +
-                                ' dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
+                                ' text-white/85 hover:bg-white/10',
                               {
                                 'px-2': 'icon' in subItem,
-                                'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200':
+                                  'bg-white text-primary-500':
                                   pathname.includes(subItem.href),
                               }
                             )}
@@ -100,14 +100,14 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
         <div className="flex flex-col pt-2 pb-3 space-y-3 px-8">
           <Link
             href="/signin"
-            className="text-sm block w-full border h-11 border-gray-200 px-5 py-3 rounded-full text-center font-medium text-gray-700 dark:text-gray-400 hover:text-primary-500"
+            className="text-sm block w-full border h-11 border-white/35 px-5 py-3 rounded-full text-center font-medium text-white hover:bg-white/10"
           >
             Sign In
           </Link>
 
           <Link
             href="/signup"
-            className="flex items-center px-5 py-3 gradient-btn  justify-center text-sm text-white rounded-full button-bg h-11"
+            className="flex items-center px-5 py-3 justify-center text-sm font-medium text-primary-500 rounded-full bg-white hover:bg-white/90 h-11"
           >
             Get Started Free
           </Link>

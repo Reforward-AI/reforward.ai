@@ -52,7 +52,7 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section id="faq" className="py-14 md:py-28 dark:bg-[#171f2e]">
+    <section id="faq" className="py-14 md:py-28 dark:bg-dark-primary">
       <div className="wrapper">
         <div className="max-w-2xl mx-auto mb-12 text-center">
           <h2 className="mb-3 font-bold text-center text-gray-800 text-3xl dark:text-white/90 md:text-title-lg">

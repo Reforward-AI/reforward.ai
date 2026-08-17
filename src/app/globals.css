@@ -16,15 +16,15 @@
 }
 
 @theme inline {
-  --color-primary-50: #f4f3ff;
-  --color-primary-100: #ebe9fe;
-  --color-primary-200: #d9d6fe;
-  --color-primary-300: #bdb4fe;
-  --color-primary-400: #9b8afb;
-  --color-primary-500: #7a5af8;
-  --color-primary-600: #6938ef;
-  --color-primary-700: #5925dc;
-  --color-primary-800: #4a1fb8;
+  --color-primary-50: #eef2f8;
+  --color-primary-100: #d7e0f0;
+  --color-primary-200: #bacbe2;
+  --color-primary-300: #8ea8ce;
+  --color-primary-400: #5477ad;
+  --color-primary-500: #012169;
+  --color-primary-600: #001a54;
+  --color-primary-700: #001443;
+  --color-primary-800: #000e2e;
 
   --color-success-50: #ecfdf3;
   --color-success-500: #ecfdf3;
@@ -52,25 +52,25 @@
   --background-image-gradient-1: linear-gradient(
     180deg,
     #f8fcff 0%,
-    #f1efff 50%,
-    #f8dcff 100%
+    #eff6ff 50%,
+    #fef2f2 100%
   );
   --background-image-gradient-2: linear-gradient(
     97deg,
-    #725cff 0%,
-    #b5b1ff 140.21%
+    #012169 0%,
+    #c8102e 140.21%
   );
 }
 
 .button-bg {
-  background-image: linear-gradient(97deg, #725cff 0%, #b5b1ff 140.21%);
+  background-color: #012169;
 }
 
 .tab-img-bg {
   background: linear-gradient(
     90deg,
-    rgba(255, 88, 213, 0.2) 0%,
-    rgba(78, 110, 255, 0.2) 100%
+    rgba(200, 16, 46, 0.2) 0%,
+    rgba(1, 33, 105, 0.2) 100%
   );
   position: relative;
   z-index: 20;
@@ -114,21 +114,29 @@
 
 .benefits-bg {
   border-radius: 20px;
-  background: linear-gradient(216deg, #a2e4e4 0%, #1c9ef6 100%);
+  background: linear-gradient(216deg, #c8102e 0%, #012169 100%);
 }
 
 .gradient-bg-two {
   background-image: var(
     --Gradient-2,
-    linear-gradient(97deg, #725cff 0%, #b5b1ff 140.21%)
+    linear-gradient(97deg, #012169 0%, #c8102e 140.21%)
   );
 }
 
 @utility hero-glow-bg {
   background-image: linear-gradient(
     180deg,
-    rgba(122, 90, 248, 0) 0%,
-    #7a5af8 100%
+    rgba(1, 33, 105, 0) 0%,
+    #012169 100%
+  );
+}
+
+[data-theme="dark"] .hero-glow-bg {
+  background-image: linear-gradient(
+    180deg,
+    rgba(23, 31, 46, 0) 0%,
+    #171f2e 100%
   );
 }
 
@@ -140,10 +148,10 @@
 .core-feature-icon {
   background-image: linear-gradient(
     180deg,
-    #7a5af8 0%,
-    rgba(122, 90, 248, 0) 100%
+    #012169 0%,
+    rgba(1, 33, 105, 0) 100%
   );
-  filter: drop-shadow(0px 23px 33px rgba(87, 80, 241, 0.59));
+  filter: drop-shadow(0px 23px 33px rgba(1, 33, 105, 0.59));
   width: 76px;
   height: 76px;
   align-items: center;
@@ -165,8 +173,8 @@
 .dashboard-gradient {
   background-image: linear-gradient(
     92deg,
-    var(--Colors-Brand-500, #7a5af8) 0%,
-    var(--Colors-Brand-200, #d9d6fe) 100%
+    var(--Colors-Brand-500, #012169) 0%,
+    var(--Colors-Brand-200, #bacbe2) 100%
   );
 }
 
@@ -174,8 +182,8 @@
   background-image: linear-gradient(
     180deg,
     #f8fcff 0%,
-    #f1efff 50%,
-    #f8dcff 100%
+    #eff6ff 50%,
+    #fef2f2 100%
   );
 }
 
@@ -231,8 +239,8 @@
   border-radius: inherit;
   background: linear-gradient(
     to right,
-    rgba(255, 87, 213, 0.5),
-    rgba(78, 110, 255, 0.5)
+    rgba(200, 16, 46, 0.5),
+    rgba(1, 33, 105, 0.5)
   );
   z-index: -1;
 }
@@ -263,19 +271,13 @@
 }
 
 .gradient-btn {
-  background-image: linear-gradient(97deg, #725cff 0%, #b5b1ff 140.21%);
+  background-color: #012169;
   color: white;
-  background-size: 200% auto;
-  background-position: 0% center;
-  transition:
-    background-position 0.6s ease-in-out,
-    transform 0.3s ease;
-  will-change: background-position, transform;
+  transition: background-color 0.3s ease;
 }
 
 .gradient-btn:hover {
-  background-image: linear-gradient(97deg, #b5b1ff 0%, #725cff 140.21%);
-  background-position: 100% center;
+  background-color: #001a54;
 }
 
 .floating {

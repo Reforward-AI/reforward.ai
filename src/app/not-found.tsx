@@ -14,10 +14,10 @@ export default function NotFoundPage() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.7" filter="url(#filter0_f_9289_13491)">
-            <circle cx="772" cy="-167.171" r="250" fill="#4E6EFF" />
+            <circle cx="772" cy="-167.171" r="250" fill="#012169" />
           </g>
           <g opacity="0.3" filter="url(#filter1_f_9289_13491)">
-            <circle cx="450" cy="-167.171" r="250" fill="#FF58D5" />
+            <circle cx="450" cy="-167.171" r="250" fill="#C8102E" />
           </g>
           <defs>
             <filter

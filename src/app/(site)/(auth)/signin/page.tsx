@@ -59,10 +59,10 @@ export default function SignInPage() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.3" filter="url(#filter0_f_9248_10254)">
-            <circle cx="380.335" cy="380.335" r="179.665" fill="#FF58D5" />
+            <circle cx="380.335" cy="380.335" r="179.665" fill="#C8102E" />
           </g>
           <g opacity="0.7" filter="url(#filter1_f_9248_10254)">
-            <circle cx="549.665" cy="380.335" r="179.665" fill="#4E6EFF" />
+            <circle cx="549.665" cy="380.335" r="179.665" fill="#012169" />
           </g>
           <defs>
             <filter
