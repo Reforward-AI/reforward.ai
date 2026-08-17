@@ -1,74 +1,82 @@
-# AI SaaS Starter Template Kit for Next.js and Tailwind CSS
+# Reforward AI
 
-This is free and open source version of **AI Starter Kit** by [Next.js Templates](https://nextjstemplates.com) - A full-stack starter template kit for building AI-driven SaaS applications, crafted using **Next.js** and **Tailwind CSS**.
+Reforward AI is a conversational AI workspace built to help teams understand context, explore work through trials, and reinvent workflows. It turns existing knowledge and experience into useful, tailored content and conversations for the work ahead.
 
-![AI Starter Kit](./ai-starter-kit.png)
+## What is included
 
-**AIStarterKit** includes ready-to-use core functionalities and integrations such as authentication, Stripe payment integration, database management, dashboards, and seamless AI API integration system. Allows you effortlessly build and launch AI-powered SaaS solutions for customers. Comes with examples - like generators for text, images, code, videos, and emails.
+- Conversational text generation powered by OpenAI
+- Streaming AI responses in a dedicated generator workspace
+- Saved chat history and new-chat workflows
+- Responsive marketing, authentication, pricing, contact, and privacy pages
+- Light and dark themes
 
+## Acknowledgements
 
-### Quick Links
+Reforward AI is built on the open-source [AI Starter Kit](https://nextjstemplates.com/templates/ai-starter-kit) by [Next.js Templates](https://nextjstemplates.com/). The starter kit provided the original project foundation and interface components, which have been adapted for Reforward AI.
 
-- [✨ AI Starter Kit](https://nextjstemplates.com/templates/ai-starter-kit)
-- [🚀 View Demo](https://demo.aistarterkit.nextjstemplates.com/)
+See the original [AI Starter Kit demo](https://demo.aistarterkit.nextjstemplates.com/).
 
-If you are looking for AI SaaS Starter Kit, that can save you hundreds of hours and allow you to launch 100x faster, **AIStarterKit** is perfect choice for you
+## Technology
 
-## Key Features
+- [Next.js](https://nextjs.org/) with the App Router
+- [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel AI SDK](https://sdk.vercel.ai/) with OpenAI
 
-- **Next.js & Tailwind CSS:** Modern tech stack for fast, responsive, and scalable development with clean UI powered by Tailwind v4 and Next.js performance.
-- **AI Integration:** Plug-and-play access to GPT, Midjourney, and other APIs to build AI features like text, code, and image generation instantly.
-- **All Essential Integrations:** Come with all essential integrations like Stripe, NextAuth, and Drizzle ORM —skip setup and start shipping core AI SaaS features.
-- **Pre-built SaaS Pages:** Includes dashboard, auth, pricing, error, and blog pages—launch-ready and designed to save weeks of development time.
-- **Highly Customizable:** Modular code structure makes it easy to tweak layouts, replace logic, or add new features based on your product needs.
-- **One-click Deployment on Vercel and Others:** Deploy on Vercel, netlify and other PaaS with one-click. Simply add environment variables and hit deploy button.
-- **Lifetime Free Updates:** One-time purchase gives you ongoing updates—new features, improvements, and fixes without extra fees or monthly costs.
+## Getting started
 
-| ✨ Features                         | 🎁 AIStarterKit Free                 | 🔥 AIStarterKit Pro                        |
-|----------------------------------|--------------------------------|--------------------------------------|
-| Next.js Pages                    | Static                         | Dynamic Boilerplate Template         |
-| Components                       | Limited                        | All According to Demo                |
-| AI Functionality                 | Demo Only                      | Included                             |
-| AI App Examples                  | 1 Example                      | All Examples (Same as Demo)          |
-| Integrations (DB, Auth, etc.)    | Not Included                   | Included                             |
-| Community Support                | Included                       | Included                             |
-| Premium Email Support            | Not Included                   | Included                             |
-| Lifetime Free Updates            | Included                       | Included
-  
-## Getting Started
+### Prerequisites
 
-We are using npm as our package manager.
+- Node.js 22 or later
+- An OpenAI API key
 
-> To use Yarn or any other package manager, delete the `package-lock.json` file and run the below commands using the package manager of your choice.
+### Install and run
 
-1. Install dependencies
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Rename `.env.example` to `.env` and set the environment variables
+2. Create a `.env.local` file in the project root:
 
-3. Development server
+   ```env
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+3. Start the development server:
 
    ```bash
    npm run dev
    ```
 
-   Your app template should now be running on [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) to use the application. The text generator is available at `/text-generator`.
 
-   Additional commands:
+## Available scripts
 
-   ```bash
-   npm run build # Build the project
-   npm run start # Start the production server
-   ```
+```bash
+npm run dev       # Start the development server
+npm run build     # Create a production build
+npm run start     # Start the production server
+npm run lint      # Run the configured lint command
+```
 
-## Features
+## AI integration
 
-- [Next.js](https://nextjs.org) App Router
-  - Advanced routing, SEO, and performance
-  - React Server Components (RSCs) and Server Actions for server-side rendering
-- [AI SDK](https://sdk.vercel.ai/docs)
-  - Unified API for generating text and tool calls with LLMs
-  - Supports OpenAI (default) and other model providers.
+The chat API lives at `/api/chat` and streams responses from OpenAI's `gpt-4o-mini` model. The system prompt is intentionally focused on concise, high-quality writing that adapts to the user's requested context, tone, and format.
+
+## Project structure
+
+```text
+src/
+  app/                 # Routes, layouts, and the streaming chat API
+  components/          # Shared UI, marketing sections, and generator UI
+  lib/ai/              # OpenAI model and generator prompt configuration
+  hooks/               # Reusable React hooks
+  context/             # Client-side application state
+public/images/         # Product and marketing assets
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
