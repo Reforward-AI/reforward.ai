@@ -14,10 +14,10 @@
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^4.0.42",
-    "@ai-sdk/react": "^4.0.69",
+    "@ai-sdk/openai": "^1.0.0",
+    "@ai-sdk/react": "^1.0.0",
     "@hookform/resolvers": "^5.0.1",
-    "ai": "^7.0.66",
+    "ai": "^4.0.0",
     "clsx": "^2.1.1",
     "copy-text-to-clipboard": "^3.2.0",
     "fslightbox-react": "^1.8.0",
