@@ -43,23 +43,22 @@ export default function Footer() {
       </span>
       <div className="relative z-10 py-16 xl:py-24">
         <div className="container px-5 mx-auto sm:px-7">
-          <div className="grid gap-y-8 gap-x-6 lg:grid-cols-12">
-            <div className="lg:col-span-3 xl:col-span-4">
+          <div className="grid gap-y-8 gap-x-6 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-4">
               <div>
                 <Link href="/" className="block mb-6">
                   <Image
-                    src="/images/logo-white.svg"
-                    alt="logo"
-                    width={128}
-                    height={32}
+                    src="/images/brands/reforward-ai-dark.svg"
+                    alt="Reforward AI"
+                    width={168}
+                    height={36}
                   />
                 </Link>
-                <p className="block text-sm text-gray-400 mb-9">
-                  A self-hosted AI starter kit built with Next.js, Tailwind CSS,
-                  and OpenAI integrations. Perfect for developers and startups
-                  to quickly build, deploy, and scale AI-powered SaaS products.
+                <p className="block max-w-sm mb-9 text-sm text-gray-400">
+                  Reforward AI helps organisations make capability visible through
+                  guided, real-world evidence.
                 </p>
-                <div className="flex">
+                <div className="hidden">
                   <a
                     href="https://www.linkedin.com/company/pimjo/posts/?feedView=all"
                     target="_blank"
@@ -202,116 +201,49 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-6 xl:col-span-5">
-              <div className="grid sm:grid-cols-3 gap-7">
+            <div className="lg:col-span-4">
+              <div className="grid gap-7 sm:grid-cols-2">
                 <div>
                   <span className="block mb-6 text-sm text-gray-400">
-                    Services
+                    Explore
                   </span>
                   <nav className="flex flex-col space-y-3">
                     <Link
-                      href="/"
+                      href="/#home"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Status
+                      Home
                     </Link>
                     <Link
-                      href="/pricing"
+                      href="/#features"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Pricing
-                    </Link>
-                    <Link
-                      href="/pricing#faq"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      FAQ
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Help Docs
-                    </Link>
-                    <Link
-                      href="/privacy"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </nav>
-                </div>
-                <div>
-                  <span className="block mb-6 text-sm text-gray-400">
-                    Features
-                  </span>
-                  <nav className="flex flex-col space-y-3">
-                    <Link
-                      href="/"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      HTML File Upload
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      HTML website hosting
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Free Image Hosting
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Upload PDF Online
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Free Zip file hosting
+                      Features
                     </Link>
                   </nav>
                 </div>
                 <div>
                   <span className="relative block mb-6 text-sm text-gray-400">
-                    Account
+                    Company
                   </span>
                   <nav className="flex flex-col space-y-3">
                     <Link
-                      href="/signin"
+                      href="/#benefits"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Login
-                    </Link>
-                    <Link
-                      href="/signup"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Sign Up
-                    </Link>
-                    <Link
-                      href="/reset-password"
-                      className="text-sm font-normal text-gray-400 transition hover:text-white"
-                    >
-                      Reset Password
+                      Why Us
                     </Link>
                     <Link
                       href="/contact"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Support
+                      Contact
                     </Link>
                   </nav>
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-4">
               <div>
                 <span className="block mb-6 text-sm text-gray-400">
                   Stay In Touch
@@ -320,15 +252,15 @@ export default function Footer() {
                   Subscribe now for exclusive insights and offers!
                 </p>
                 <form>
-                  <div className="flex flex-col items-center gap-2 w-full sm:max-w-64">
+                  <div className="flex items-center w-full gap-2 sm:max-w-80">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full h-12 p-4 text-sm text-white border border-gray-700 rounded-full placeholder:text-center placeholder:text-gray-400 placeholder:text-sm text-center placeholder:font-normal focus:outline-0"
+                      className="flex-1 min-w-0 h-12 p-4 text-sm text-white border border-gray-700 rounded-full placeholder:text-center placeholder:text-gray-400 placeholder:text-sm text-center placeholder:font-normal focus:outline-0"
                       required
                     />
-                    <button className="w-full px-6 py-3 text-sm font-medium text-white transition rounded-full cursor-pointer bg-primary-500 hover:bg-primary-600">
-                      Subscribe Now
+                    <button className="shrink-0 h-12 px-6 text-sm font-medium text-white transition rounded-full cursor-pointer bg-primary-500 hover:bg-primary-600">
+                      Send
                     </button>
                   </div>
                 </form>
@@ -341,7 +273,7 @@ export default function Footer() {
         <div className="container relative z-10 px-5 mx-auto sm:px-7">
           <div className="py-5 text-center">
             <p className="text-sm text-gray-500">
-              &copy; {getCurrentYear()} AiStarterKit - All Rights Reserved.
+              &copy; {getCurrentYear()} Reforward AI. All rights reserved.
             </p>
           </div>
         </div>

@@ -4,34 +4,33 @@ import React from "react";
 
 export default function BenefitsGrid() {
   return (
-    <section className="bg-dark-primary py-14 md:py-28">
+    <section id="benefits" className="bg-dark-primary py-14 md:py-28">
       <div className="wrapper">
         <div className="max-w-2xl mx-auto mb-12 text-center">
           <h2 className="max-w-lg mx-auto mb-3 font-bold text-center text-white dark:text-white/90 text-3xl md:text-title-lg">
-            The key benefits of using our tools.
+            Better evidence. More confident decisions.
           </h2>
           <p className="max-w-2xl mx-auto text-base dark: font-normal leading-6 text-white/50">
-            Unlock the Potential of Innovation. Discover the Advanced AI Tools
-            Transforming Your Ideas into Reality with Unmatched Precision and
-            Intelligence.
+            Reforward turns guided, real-world activity into meaningful proof
+            of capability for people, teams, and the organisations that support them.
           </p>
         </div>
         <div className="max-w-[1008px] mx-auto">
           <div className="grid lg:grid-cols-12 gap-8">
             <div className="lg:col-span-6">
-              <div className="relative flex flex-col justify-between bg-primary-500 rounded-[20px] p-9 md:p-13">
-                <div className="max-w-sm mb-32">
+              <div className="relative flex flex-col justify-between rounded-[20px] border border-white/10 bg-[#0d2d59]/70 p-9 md:p-13">
+                <div className="max-w-sm">
                   <h3 className="font-bold text-white text-2xl md:text-3xl mb-4">
-                    Craft Professional-Grade Content with AI
+                    Demonstrate capability in context
                   </h3>
                   <p className="text-base text-white/70">
-                    Transform your ideas into groundbreaking realities with
-                    advanced AI tools.
+                    Give people a safe space to make decisions, complete work,
+                    and show what they can do beyond a CV or score.
                   </p>
                 </div>
                 <div>
                   <svg
-                    className="absolute left-8 top-[61%] floating-1"
+                    className="hidden absolute left-8 top-[61%] floating-1"
                     width="111"
                     height="34"
                     viewBox="0 0 111 34"
@@ -58,7 +57,7 @@ export default function BenefitsGrid() {
                     />
                   </svg>
                   <svg
-                    className="absolute right-28 top-[55%] floating-2"
+                    className="hidden absolute right-28 top-[55%] floating-2"
                     width="118"
                     height="34"
                     viewBox="0 0 118 34"
@@ -134,7 +133,7 @@ export default function BenefitsGrid() {
                   </svg>
 
                   <svg
-                    className="right-8 absolute bottom-[15%] floating-3"
+                    className="hidden right-8 absolute bottom-[15%] floating-3"
                     width="117"
                     height="34"
                     viewBox="0 0 117 34"
@@ -161,68 +160,51 @@ export default function BenefitsGrid() {
                     />
                   </svg>
 
-                  <Image
-                    src="/images/benefits/bn-1.svg"
-                    className="-mb-8 md:-mb-13 w-full"
-                    alt=""
-                    width={488}
-                    height={288}
-                    sizes="100vw"
-                  />
                 </div>
               </div>
             </div>
             <div className="lg:col-span-6">
-              <div className="benefits-bg rounded-[20px] p-12 overflow-hidden">
-                <div>
-                  <Image
-                    src="/images/benefits/bn-2.svg"
-                    alt=""
-                    width={306}
-                    height={279}
-                  />
-                </div>
+              <div className="benefits-bg rounded-[20px] border border-white/10 p-12 overflow-hidden">
                 <div>
                   <h3 className="font-bold max-w-xs text-white text-2xl md:text-3xl mb-4">
-                    Boost your Productivity 10X with our AI agent tools.
+                    Build experiences around real needs.
                   </h3>
                   <p className="text-base max-w-sm text-white/70">
-                    Unlock the Potential of Innovation, Discover the Advanced AI
-                    Tools Intelligence.
+                    Configure conversational, multimodal AI services that help
+                    people learn, practise, and progress with confidence.
                   </p>
                 </div>
               </div>
             </div>
             <div className="lg:col-span-12">
-              <div className="lg:px-12 p-8 bg-[#012169] lg:pb-0 lg:p-12 relative rounded-[20px] h-full lg:flex lg:flex-row justify-between bg-cover flex-col gap-5">
+              <div className="lg:px-12 p-8 border border-white/10 bg-[#102f5a]/70 lg:pb-0 lg:p-12 relative rounded-[20px] h-full lg:flex lg:flex-row justify-between flex-col gap-5">
                 <div className="max-w-sm relative z-10">
                   <h3 className="font-bold text-white text-2xl md:text-3xl mb-4">
-                    Overcome Writers Block Today
+                    Make progress visible and trusted
                   </h3>
                   <p className="text-base text-white/70 mb-8">
-                    Discover the cutting-edge AI tools that bring your ideas to
-                    life with exceptional accuracy.
+                    Create auditable portfolios and practical insight from the
+                    work people complete, with responsible AI built in.
                   </p>
                   <Link
                     href="/email-generator"
                     className="font-medium inline-block text-sm text-white rounded-full bg-primary-500 hover:bg-primary-600 transition py-3 px-6"
                   >
-                    Try it now for Free
+                    Explore Reforward AI
                   </Link>
                 </div>
-                <div>
-                  <Image
-                    src="/images/benefits/bn-3.svg"
-                    className="hidden lg:block relative z-10"
-                    alt=""
-                    width={359}
-                    height={318}
-                  />
-                </div>
+                <Image
+                  src="/images/benefits/undraw-launching.svg"
+                  className="hidden lg:block relative z-10 w-[360px]"
+                  alt=""
+                  width={861}
+                  height={649}
+                  sizes="360px"
+                />
                 <Image
                   src="/images/benefits/blur-shape.png"
                   alt=""
-                  className="h-full w-full -z-0 absolute top-0 right-0"
+                  className="absolute top-0 right-0 h-full w-full opacity-10"
                   width={399}
                   height={399}
                 />

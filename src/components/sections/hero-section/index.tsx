@@ -5,7 +5,7 @@ import { Subheading } from './subheading';
 
 export default function HeroSection() {
   return (
-    <section className="pt-16 relative overflow-hidden dark:bg-dark-primary">
+    <section id="home" className="pt-16 relative overflow-hidden dark:bg-dark-primary">
       <div className="max-w-[120rem] mx-auto relative">
         <div className="wrapper">
           <div className="max-w-[800px] mx-auto">
@@ -21,18 +21,11 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="max-w-[1000px] mx-auto relative">
-            <div className="p-3 sm:p-[18px] relative z-30 rounded-[32px] border border-white/30 dark:border-white/10 bg-white/20">
-              <Image
-                src="/images/hero/hero-img.jpg"
-                alt=""
-                className="w-full rounded-2xl block dark:hidden"
-                width={966}
-                height={552}
-              />
+            <div className="p-3 sm:p-[18px] relative z-30 rounded-[32px] border border-gray-300 dark:border-white/10 bg-white/20">
               <Image
                 src="/images/hero/stintagents-websocket-4.png"
                 alt=""
-                className="w-full rounded-2xl hidden dark:block"
+                className="w-full rounded-2xl block"
                 width={1444}
                 height={796}
                 unoptimized

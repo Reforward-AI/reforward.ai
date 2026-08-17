@@ -1,5 +1,6 @@
 'use client';
 import { CloseIcon, MenuIcon } from '@/icons/icons';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import DesktopNav from './desktop-nav';
@@ -24,47 +25,15 @@ export default function Header() {
               href="/"
               className="flex flex-col items-center gap-0.5"
             >
-              <svg
-                className="h-11 w-auto sm:h-12"
-                viewBox="-40 -40 1239 960"
-                role="img"
-                aria-label="Reforward.ai"
-              >
-                <defs>
-                  <filter
-                    id="logo-outline"
-                    x="-10%"
-                    y="-10%"
-                    width="120%"
-                    height="120%"
-                  >
-                    <feMorphology
-                      in="SourceAlpha"
-                      operator="dilate"
-                      radius="28"
-                      result="expanded"
-                    />
-                    <feFlood floodColor="#7A8798" result="outlineColor" />
-                    <feComposite
-                      in="outlineColor"
-                      in2="expanded"
-                      operator="in"
-                      result="outline"
-                    />
-                    <feMerge>
-                      <feMergeNode in="outline" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <image
-                  href="/images/logo/reforward.ai-logo-transparent.png"
-                  width="1159"
-                  height="880"
-                  filter="url(#logo-outline)"
-                />
-              </svg>
-              <span className="text-sm font-bold text-gray-200">
+              <Image
+                src="/images/brands/reforward-ai-dark.svg"
+                alt="Reforward AI"
+                className="h-10 w-auto sm:h-11"
+                width={168}
+                height={36}
+                priority
+              />
+              <span className="text-base font-bold text-gray-200">
                 Reforward AI
               </span>
             </Link>
@@ -86,19 +55,14 @@ export default function Header() {
               {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
 
-            <Link
-              href="/signin"
-              className="text-sm hidden lg:block font-medium text-white/85 hover:text-white"
-            >
-              Sign In
-            </Link>
-
-            <Link
-              href="/signup"
+            <a
+              href="https://www.stintagents.com"
+              target="_blank"
+              rel="noreferrer"
               className="lg:inline-flex items-center px-5 py-3 hidden text-sm font-medium text-primary-500 rounded-full bg-white hover:bg-white/90 h-11"
             >
-              Get Started Free
-            </Link>
+              Explore StintAgents
+            </a>
           </div>
         </div>
       </div>

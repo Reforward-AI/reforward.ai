@@ -98,19 +98,14 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
         </div>
 
         <div className="flex flex-col pt-2 pb-3 space-y-3 px-8">
-          <Link
-            href="/signin"
-            className="text-sm block w-full border h-11 border-white/35 px-5 py-3 rounded-full text-center font-medium text-white hover:bg-white/10"
-          >
-            Sign In
-          </Link>
-
-          <Link
-            href="/signup"
+          <a
+            href="https://www.stintagents.com"
+            target="_blank"
+            rel="noreferrer"
             className="flex items-center px-5 py-3 justify-center text-sm font-medium text-primary-500 rounded-full bg-white hover:bg-white/90 h-11"
           >
-            Get Started Free
-          </Link>
+            Explore StintAgents
+          </a>
         </div>
       </div>
     </div>

@@ -2,39 +2,39 @@ import * as icons from "@/assets/homepage/core-features";
 
 export const CORE_FEATURES = [
   {
-    title: "Seamless Content Creation AI",
+    title: "Capability Made Visible",
     description:
-      "Let our AI-powered service simplify your content creation process. Start using AI today!",
+      "Turn real decisions, completed tasks, and demonstrated skills into clear evidence of what people can do.",
     iconUrl: icons.pencil,
   },
   {
-    title: "Your Ideas, Powered by Our Technology",
+    title: "Immersive AI Simulations",
     description:
-      "Discover how AI can transform your ideas into captivating content with our high-quality service.",
+      "Create safe, role-relevant scenarios where people can practise, learn, and demonstrate capability in context.",
     iconUrl: icons.bulb,
   },
   {
-    title: "Intelligent Writing by Powerful AI",
+    title: "Multimodal Agent Experiences",
     description:
-      "Effortlessly access AI-generated content for your blogs, websites, and more with our high-quality, convenient service.",
+      "Bring together conversation, speech, documents, and digital tools in natural experiences that adapt to each user.",
     iconUrl: icons.robot,
   },
   {
-    title: "AI Generation Made Life Easier",
+    title: "Context-Aware Guidance",
     description:
-      "Experience effortless content creation with our AI service. Write less, accomplish more.",
+      "Use conversational AI that understands the task, the environment, and the next useful step rather than offering generic prompts.",
     iconUrl: icons.chat,
   },
   {
-    title: "Premium AI-Generated Content",
+    title: "Evidence You Can Trust",
     description:
-      "Get expertly crafted content in no time with our AI service. Where quality meets speed.",
+      "Build auditable portfolios of work and structured insights that support confident decisions for individuals and organisations.",
     iconUrl: icons.crown,
   },
   {
-    title: "Super Fast AI Writing Companion",
+    title: "Responsible by Design",
     description:
-      "Partner with AI to create content that connects with your audience. Give it a try now.",
+      "Deploy inclusive, safeguarded AI services with governance, privacy, and meaningful human oversight built in.",
     iconUrl: icons.lightningBolt,
   },
 ];

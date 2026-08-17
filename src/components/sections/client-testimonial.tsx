@@ -91,9 +91,6 @@ import { useState } from 'react';
         <div className="wrapper">
           <div>
             <div className="max-w-2xl mx-auto mb-12 text-center">
-              <h2 className="mb-3 font-bold text-center text-gray-800 text-3xl dark:text-white/90 md:text-title-lg">
-                What our users say
-              </h2>
               <p className="max-w-xl mx-auto leading-6 text-gray-500 dark:text-gray-400">
                 Unlock the Potential of Innovation. Discover the Advanced AI
                 Tools Transforming Your Ideas into Reality with Unmatched

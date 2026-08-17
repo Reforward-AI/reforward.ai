@@ -15,17 +15,17 @@ export default function ContactPage() {
           <div className="contact-wrapper border p-14 relative z-30 bg-white border-gray-100 dark:bg-dark-primary dark:border-gray-800">
             <div className="text-center mb-12">
               <h3 className="text-gray-800 font-bold dark:text-white text-3xl mb-2">
-                Need any Help? Get in touch 👋
+                Get in touch
               </h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Open a ticket, we will get back to you ASAP
+                Send us a message and we&apos;ll get back to you soon.
               </p>
             </div>
             <form>
               <div className="grid grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="firstName">First Name</Label>
-                  <Input type="text" placeholder="Jhamse" />
+                  <Input type="text" placeholder="Your first name" />
                 </div>
                 <div>
                   <Label htmlFor="lastName"> Last Name</Label>
