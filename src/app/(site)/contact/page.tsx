@@ -10,7 +10,7 @@ export default function ContactPage() {
     <section className="py-28 relative">
       <div className="wrapper">
         <div className="relative max-w-[800px] mx-auto">
-          <div className="contact-wrapper border p-14 relative z-30 bg-white border-gray-100 dark:bg-dark-primary dark:border-gray-800">
+          <div className="contact-wrapper border p-14 relative z-30 bg-primary-50 border-primary-200 dark:bg-dark-primary dark:border-primary-400/50">
             <div className="text-center mb-12">
               <h3 className="text-gray-800 font-bold dark:text-white text-3xl mb-2">
                 Get in touch
@@ -31,7 +31,7 @@ export default function ContactPage() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g opacity="0.3" filter="url(#filter0_f_9248_10254)">
+          <g opacity="0.15" filter="url(#filter0_f_9248_10254)">
             <circle cx="380.335" cy="380.335" r="179.665" fill="#C8102E" />
           </g>
           <g opacity="0.7" filter="url(#filter1_f_9248_10254)">
