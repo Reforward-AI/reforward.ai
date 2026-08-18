@@ -24,7 +24,7 @@ CONTACT_TO_EMAIL=hello@stintagents.com
 
 ## Acknowledgements
 
-Reforward AI is built on the open-source [AI Starter Kit](https://nextjstemplates.com/templates/ai-starter-kit) by [Next.js Templates](https://nextjstemplates.com/). The starter kit provided the original project foundation and interface components, which have been adapted for Reforward AI.
+Reforward AI was initially built on [AI Starter Kit](https://nextjstemplates.com/templates/ai-starter-kit) by [Next.js Templates](https://nextjstemplates.com/). Required license and attribution notices for incorporated third-party material are in [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES).
 
 See the original [AI Starter Kit demo](https://demo.aistarterkit.nextjstemplates.com/).
 
@@ -92,4 +92,4 @@ public/images/         # Product and marketing assets
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is proprietary and is governed by the [Reforward AI Proprietary License](LICENSE). All rights are reserved. Third-party components remain subject to their own licenses as documented in [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES).
