@@ -40,10 +40,10 @@ export default function HeroSection() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g opacity="0.7" filter="url(#filter0_f_9279_7148)">
-                  <circle cx="800" cy="500.03" r="300" fill="#012169" />
+                  <circle cx="800" cy="500.03" r="300" fill="#193D73" />
                 </g>
                 <g opacity="0.3" filter="url(#filter1_f_9279_7148)">
-                  <circle cx="500" cy="500.03" r="300" fill="#C8102E" />
+                  <circle cx="500" cy="500.03" r="300" fill="#416B9F" />
                 </g>
                 <defs>
                   <filter
