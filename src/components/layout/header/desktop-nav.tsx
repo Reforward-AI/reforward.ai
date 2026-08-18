@@ -31,7 +31,8 @@ function DesktopNavLink({
       className={cn(
         'text-white/85 text-sm px-4 py-1.5 rounded-full hover:text-white font-medium',
         {
-          'bg-white font-medium text-primary-500 shadow-xs': isActive,
+          'bg-white font-medium text-primary-500 hover:text-[#0f766e] shadow-xs':
+            isActive,
         }
       )}
     >
@@ -112,7 +113,7 @@ export default function DesktopNav({
                 className={cn(
                   'text-white/85 hover:text-white group text-sm inline-flex gap-1 items-center px-4 py-1.5 font-medium rounded-full',
                   {
-                    'bg-white font-medium text-primary-500 shadow-xs':
+                    'bg-white font-medium text-primary-500 hover:text-[#0f766e] shadow-xs':
                       item.items.some(({ href }) => pathname?.includes(href)),
                   }
                 )}

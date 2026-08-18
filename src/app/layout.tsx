@@ -1,11 +1,33 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
-import { Onest } from 'next/font/google';
+import {
+  IBM_Plex_Mono,
+  Inter,
+  Orbitron,
+  Space_Grotesk,
+} from 'next/font/google';
 import './globals.css';
 import { ToasterProvider } from './providers/toaster';
 
-const onest = Onest({
+const inter = Inter({
   subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+});
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-ibm-plex-mono',
 });
 
 export const metadata: Metadata = {
@@ -25,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`bg-gray-50 dark:bg-dark-secondary min-h-screen flex flex-col ${onest.className}`}
+        className={`bg-[#f5f7fb] dark:bg-dark-secondary min-h-screen flex flex-col font-sans ${inter.variable} ${spaceGrotesk.variable} ${orbitron.variable} ${ibmPlexMono.variable}`}
       >
         <ThemeProvider disableTransitionOnChange>
           {/* ToasterProvider must render before the children components */}

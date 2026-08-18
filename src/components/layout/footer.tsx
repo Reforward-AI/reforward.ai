@@ -14,7 +14,7 @@ export default function Footer() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g filter="url(#filter0_f_11105_867)">
-            <circle cx="630" cy="-173.299" r="230" fill="#C8102E" />
+            <circle cx="630" cy="-173.299" r="230" fill="#416B9F" />
           </g>
           <defs>
             <filter
