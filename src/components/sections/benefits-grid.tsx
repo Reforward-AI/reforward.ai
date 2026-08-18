@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 export default function BenefitsGrid() {
@@ -186,12 +185,14 @@ export default function BenefitsGrid() {
                     Create auditable portfolios and practical insight from the
                     work people complete, with responsible AI built in.
                   </p>
-                  <Link
-                    href="/email-generator"
+                  <a
+                    href="https://www.stintagents.com"
+                    target="_blank"
+                    rel="noreferrer"
                     className="font-medium inline-block text-sm text-white rounded-full bg-primary-500 hover:bg-primary-600 transition py-3 px-6"
                   >
-                    Explore Reforward AI
-                  </Link>
+                    See Our Product
+                  </a>
                 </div>
                 <Image
                   src="/images/benefits/undraw-launching.svg"
