@@ -10,11 +10,29 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState('/');
   const pathname = usePathname();
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setActiveHref(`${pathname}${window.location.hash}`);
   }, [pathname]);
+
+  useEffect(() => {
+    const syncActiveHref = () => {
+      setActiveHref(`${window.location.pathname}${window.location.hash}`);
+    };
+
+    syncActiveHref();
+    window.addEventListener('hashchange', syncActiveHref);
+
+    return () => window.removeEventListener('hashchange', syncActiveHref);
+  }, []);
+
+  function handleNavigation(href: string) {
+    setActiveHref(href);
+    setMobileMenuOpen(false);
+  }
 
   return (
     <header className="bg-dark-primary border-b border-white/10 sticky top-0 z-50 py-2 lg:py-4">
@@ -39,7 +57,10 @@ export default function Header() {
             </Link>
           </div>
 
-          <DesktopNav />
+          <DesktopNav
+            activeHref={activeHref}
+            onNavigate={handleNavigation}
+          />
 
           <div className="flex items-center gap-4 justify-self-end">
             <ThemeToggle />
@@ -67,7 +88,11 @@ export default function Header() {
         </div>
       </div>
 
-      <MainMobileNav isOpen={mobileMenuOpen} />
+      <MainMobileNav
+        isOpen={mobileMenuOpen}
+        activeHref={activeHref}
+        onNavigate={handleNavigation}
+      />
     </header>
   );
 }

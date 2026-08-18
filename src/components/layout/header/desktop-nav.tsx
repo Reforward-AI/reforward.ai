@@ -5,9 +5,48 @@ import { usePathname } from 'next/navigation';
 import { navItems } from './nav-items';
 import { useEffect, useState } from 'react';
 
-export default function DesktopNav() {
+interface DesktopNavLinkProps {
+  href: string;
+  label: string;
+  isActive: boolean;
+  onNavigate: (href: string) => void;
+}
+
+interface DesktopNavProps {
+  activeHref?: string;
+  onNavigate?: (href: string) => void;
+}
+
+function DesktopNavLink({
+  href,
+  label,
+  isActive,
+  onNavigate,
+}: DesktopNavLinkProps) {
+  return (
+    <Link
+      href={href}
+      aria-current={isActive ? 'page' : undefined}
+      onClick={() => onNavigate(href)}
+      className={cn(
+        'text-white/85 text-sm px-4 py-1.5 rounded-full hover:text-white font-medium',
+        {
+          'bg-white font-medium text-primary-500 shadow-xs': isActive,
+        }
+      )}
+    >
+      {label}
+    </Link>
+  );
+}
+
+export default function DesktopNav({
+  activeHref,
+  onNavigate,
+}: DesktopNavProps) {
   const pathname = usePathname();
   const [activeDropdownKey, setActiveDropdownKey] = useState('');
+  const [internalActiveHref, setInternalActiveHref] = useState(pathname);
 
   function toggleActiveDropdown(key: string) {
     setActiveDropdownKey((prevKey) => (prevKey === key ? '' : key));
@@ -16,26 +55,39 @@ export default function DesktopNav() {
   useEffect(() => {
     // Hide dropdown on pathname changes
     setActiveDropdownKey('');
+    setInternalActiveHref(`${pathname}${window.location.hash}`);
   }, [pathname]);
+
+  useEffect(() => {
+    const syncActiveHref = () => {
+      setInternalActiveHref(`${window.location.pathname}${window.location.hash}`);
+    };
+
+    syncActiveHref();
+    window.addEventListener('hashchange', syncActiveHref);
+
+    return () => window.removeEventListener('hashchange', syncActiveHref);
+  }, []);
+
+  function handleNavigation(href: string) {
+    setInternalActiveHref(href);
+    onNavigate?.(href);
+  }
+
+  const selectedHref = activeHref ?? internalActiveHref;
 
   return (
     <nav className="hidden lg:flex lg:items-center bg-white/5 rounded-full p-1 max-h-fit">
       {navItems.map((item) => {
         if (item.type === 'link') {
           return (
-            <Link
+            <DesktopNavLink
               key={item.href}
               href={item.href}
-              className={cn(
-                'text-white/85 text-sm px-4 py-1.5 rounded-full hover:text-white font-medium',
-                {
-                  'bg-white font-medium text-primary-500 shadow-xs':
-                    pathname === item.href,
-                }
-              )}
-            >
-              {item.label}
-            </Link>
+              label={item.label}
+              isActive={selectedHref === item.href}
+              onNavigate={handleNavigation}
+            />
           );
         }
 

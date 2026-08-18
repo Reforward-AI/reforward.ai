@@ -8,9 +8,49 @@ import { ChevronDownIcon } from '@/icons/icons';
 
 interface MobileMenuProps {
   isOpen: boolean;
+  activeHref: string;
+  onNavigate: (href: string) => void;
 }
 
-export default function MainMobileNav({ isOpen }: MobileMenuProps) {
+interface MobileNavLinkProps {
+  href: string;
+  label: string;
+  isActive: boolean;
+  onNavigate: (href: string) => void;
+}
+
+function MobileNavLink({
+  href,
+  label,
+  isActive,
+  onNavigate,
+}: MobileNavLinkProps) {
+  function handleClick() {
+    onNavigate(href);
+  }
+
+  return (
+    <Link
+      href={href}
+      aria-current={isActive ? 'page' : undefined}
+      onClick={handleClick}
+      className={cn(
+        'block px-3 py-2 rounded-md text-sm font-medium text-white/85 hover:bg-white/10',
+        {
+          'bg-white text-primary-500': isActive,
+        }
+      )}
+    >
+      {label}
+    </Link>
+  );
+}
+
+export default function MainMobileNav({
+  isOpen,
+  activeHref,
+  onNavigate,
+}: MobileMenuProps) {
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState('');
 
@@ -28,18 +68,13 @@ export default function MainMobileNav({ isOpen }: MobileMenuProps) {
             {navItems.map((item) => {
               if (item.type === 'link') {
                 return (
-                  <Link
+                  <MobileNavLink
                     key={item.href}
                     href={item.href}
-                    className={cn(
-                      'block px-3 py-2 rounded-md text-sm font-medium text-white/85 hover:bg-white/10',
-                      {
-                        'bg-white text-primary-500': pathname === item.href,
-                      }
-                    )}
-                  >
-                    {item.label}
-                  </Link>
+                    label={item.label}
+                    isActive={activeHref === item.href}
+                    onNavigate={onNavigate}
+                  />
                 );
               }
 
