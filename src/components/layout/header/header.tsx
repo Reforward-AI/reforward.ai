@@ -51,9 +51,6 @@ export default function Header() {
                 height={36}
                 priority
               />
-              <span className="text-base font-bold text-gray-200">
-                Reforward AI
-              </span>
             </Link>
           </div>
 

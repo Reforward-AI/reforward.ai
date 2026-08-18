@@ -10,6 +10,18 @@ Reforward AI is a conversational AI workspace built to help teams understand con
 - Responsive marketing, authentication, pricing, contact, and privacy pages
 - Light and dark themes
 
+## Email setup
+
+The contact form sends messages through Resend and the footer sign-up adds subscribers to your Resend Contacts list. In Resend, add and verify the `reforward.stintagents.com` domain (including its required DNS records), then configure the following server-only variables:
+
+```bash
+RESEND_API_KEY=re_...
+CONTACT_FROM_EMAIL="Reforward <hello@reforward.stintagents.com>"
+CONTACT_TO_EMAIL=hello@stintagents.com
+```
+
+`RESEND_FROM_EMAIL` and `CONTACT_RECIPIENT_EMAIL` are also supported for compatibility.
+
 ## Acknowledgements
 
 Reforward AI is built on the open-source [AI Starter Kit](https://nextjstemplates.com/templates/ai-starter-kit) by [Next.js Templates](https://nextjstemplates.com/). The starter kit provided the original project foundation and interface components, which have been adapted for Reforward AI.
@@ -22,6 +34,7 @@ See the original [AI Starter Kit demo](https://demo.aistarterkit.nextjstemplates
 - [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vercel AI SDK](https://sdk.vercel.ai/) with OpenAI
+- [Resend](https://resend.com/) for website email and newsletter contacts
 
 ## Getting started
 
