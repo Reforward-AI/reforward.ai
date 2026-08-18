@@ -1,6 +1,7 @@
 import { getCurrentYear } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { FooterNewsletterForm } from "./footer-newsletter-form";
 
 export default function Footer() {
   return (
@@ -251,19 +252,7 @@ export default function Footer() {
                 <p className="block mb-5 text-sm text-gray-400">
                   Subscribe now for exclusive insights and offers!
                 </p>
-                <form>
-                  <div className="flex items-center w-full gap-2 sm:max-w-80">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="flex-1 min-w-0 h-12 p-4 text-sm text-white border border-gray-700 rounded-full placeholder:text-center placeholder:text-gray-400 placeholder:text-sm text-center placeholder:font-normal focus:outline-0"
-                      required
-                    />
-                    <button className="shrink-0 h-12 px-6 text-sm font-medium text-white transition rounded-full cursor-pointer bg-primary-500 hover:bg-primary-600">
-                      Send
-                    </button>
-                  </div>
-                </form>
+                <FooterNewsletterForm />
               </div>
             </div>
           </div>

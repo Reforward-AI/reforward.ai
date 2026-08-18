@@ -1,6 +1,4 @@
-import { Input } from '@/components/ui/inputs';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/inputs/textarea';
+import { ContactForm } from './contact-form';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -21,31 +19,7 @@ export default function ContactPage() {
                 Send us a message and we&apos;ll get back to you soon.
               </p>
             </div>
-            <form>
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input type="text" placeholder="Your first name" />
-                </div>
-                <div>
-                  <Label htmlFor="lastName"> Last Name</Label>
-                  <Input type="text" placeholder="Enter your last name" />
-                </div>
-                <div className="col-span-full">
-                  <Label htmlFor="email">Email address</Label>
-                  <Input type="text" placeholder="example@gmail.com" />
-                </div>
-                <div className="col-span-full">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea rows={6} placeholder="Type your message" />
-                </div>
-                <div className="col-span-full">
-                  <button className="bg-primary-500 hover:bg-primary-600 transition h-12 py-3 px-6 w-full font-medium text-white text-sm rounded-full">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
